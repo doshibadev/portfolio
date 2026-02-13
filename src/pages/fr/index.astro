@@ -1,29 +1,19 @@
 ---
 import "@fontsource/jetbrains-mono";
-import "../styles/global.css";
+import "../../styles/global.css";
 ---
 
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Arthur Duchene // Backend Engineer</title>
+		<title>Arthur Duchene // Ingénieur Backend</title>
         <script is:inline>
-            // Check for saved language preference or browser language
-            const savedLang = localStorage.getItem('language-preference');
-            const browserLang = navigator.language || navigator.userLanguage;
-            
-            if (savedLang === 'fr') {
-                window.location.href = '/fr';
-            } else if (!savedLang && browserLang.startsWith('fr')) {
-                window.location.href = '/fr';
-            }
-            
-            // Save preference when staying on EN page
-            localStorage.setItem('language-preference', 'en');
+            // Save language preference
+            localStorage.setItem('language-preference', 'fr');
         </script>
 	</head>
 	<body class="bg-[#0a0a0a] text-zinc-300 font-mono selection:bg-orange-500 selection:text-black antialiased">
@@ -33,10 +23,10 @@ import "../styles/global.css";
             <!-- HERO SECTION -->
             <header class="mb-20 md:mb-32">
                  <!-- Language Toggle -->
-                 <div class="flex justify-end mb-8 text-sm font-medium">
-                    <span class="text-orange-500">EN</span>
+                <div class="flex justify-end mb-8 text-sm font-medium">
+                    <a href="/" class="text-zinc-500 hover:text-white transition-colors">EN</a>
                     <span class="mx-2 text-zinc-700">|</span>
-                    <a href="/fr" class="text-zinc-500 hover:text-white transition-colors">FR</a>
+                    <span class="text-orange-500">FR</span>
                 </div>
 
                 <div class="border-l-2 border-orange-500 pl-6 md:pl-8">
@@ -44,11 +34,11 @@ import "../styles/global.css";
                         Arthur Duchene
                     </h1>
                     <h2 class="text-xl md:text-2xl text-zinc-400 font-medium mb-6">
-                        Backend & Systems Software Engineer
+                        Ingénieur Logiciel Backend & Système
                     </h2>
                     <p class="text-lg md:text-xl text-zinc-400 max-w-2xl leading-relaxed">
-                        Building high-performance native applications and scalable backend infrastructure. 
-                        Focused on low-level systems and protocol implementation.
+                        Conception d'applications natives haute performance et d'infrastructures backend scalables.
+                        Spécialisé dans les systèmes bas niveau et l'implémentation de protocoles.
                     </p>
                 </div>
 
@@ -69,20 +59,20 @@ import "../styles/global.css";
             <!-- ABOUT SECTION -->
             <section class="mb-20 md:mb-32 grid md:grid-cols-12 gap-8">
                 <div class="md:col-span-12 mb-8 flex items-center gap-4">
-                    <h3 class="text-orange-500 font-bold uppercase tracking-widest text-xl">01. About</h3>
+                    <h3 class="text-orange-500 font-bold uppercase tracking-widest text-xl">01. À propos</h3>
                     <div class="h-px bg-zinc-800 flex-grow"></div>
                 </div>
                 <div class="md:col-span-4 hidden md:block"></div>
                 <div class="md:col-span-8 text-base md:text-lg leading-relaxed text-zinc-300 space-y-6">
                     <p>
-                        I am a passionate software engineer based in France. My journey began with game development in Lua, which quickly evolved into a deep interest in data structures, web technologies, and software architecture.
+                        Je suis un ingénieur logiciel passionné basé en France. Mon parcours a débuté avec le développement de jeux vidéo en Lua, ce qui a rapidement évolué vers un intérêt profond pour les structures de données, les technologies web et l'architecture logicielle.
                     </p>
                     <p>
-                        Instead of just consuming technology, I dedicate my time to building it. I am an active open-source contributor, focusing on low-level systems, high-performance applications, and robust backend solutions.
+                        Plutôt que de simplement consommer la technologie, je consacre mon temps à la construire. Je suis un contributeur open-source actif, me concentrant sur les systèmes bas niveau, les applications haute performance et les solutions backend robustes.
                     </p>
                     <div class="pt-4 flex items-center gap-2 text-sm text-zinc-500">
                         <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                        Open to internship opportunities
+                        Ouvert aux opportunités de stage
                     </div>
                 </div>
             </section>
@@ -90,7 +80,7 @@ import "../styles/global.css";
             <!-- SKILLS SECTION -->
             <section class="mb-20 md:mb-32 grid md:grid-cols-12 gap-8">
                 <div class="md:col-span-12 mb-8 flex items-center gap-4">
-                    <h3 class="text-orange-500 font-bold uppercase tracking-widest text-xl">02. Tech Stack</h3>
+                    <h3 class="text-orange-500 font-bold uppercase tracking-widest text-xl">02. Stack Technique</h3>
                     <div class="h-px bg-zinc-800 flex-grow"></div>
                 </div>
                 <div class="md:col-span-4 hidden md:block"></div>
@@ -98,7 +88,7 @@ import "../styles/global.css";
                     
                     <!-- Languages -->
                     <div>
-                        <h4 class="text-white font-bold mb-4 border-b border-zinc-800 pb-2 inline-block">Languages</h4>
+                        <h4 class="text-white font-bold mb-4 border-b border-zinc-800 pb-2 inline-block">Langages</h4>
                         <ul class="space-y-2 text-zinc-400">
                             <li>C++ / Rust</li>
                             <li>TypeScript / Node.js</li>
@@ -120,13 +110,13 @@ import "../styles/global.css";
 
                     <!-- Specialized -->
                     <div class="sm:col-span-2">
-                        <h4 class="text-white font-bold mb-4 border-b border-zinc-800 pb-2 inline-block">Specialized Engineering</h4>
+                        <h4 class="text-white font-bold mb-4 border-b border-zinc-800 pb-2 inline-block">Ingénierie Spécialisée</h4>
                         <div class="flex flex-wrap gap-2 text-sm">
-                            <span class="bg-zinc-900 px-3 py-1 rounded text-zinc-300 border border-zinc-800">WebSocket Protocol</span>
-                            <span class="bg-zinc-900 px-3 py-1 rounded text-zinc-300 border border-zinc-800">Voice Encryption (Opus/libsodium)</span>
-                            <span class="bg-zinc-900 px-3 py-1 rounded text-zinc-300 border border-zinc-800">Game Server Architecture</span>
-                            <span class="bg-zinc-900 px-3 py-1 rounded text-zinc-300 border border-zinc-800">Package Management</span>
-                            <span class="bg-zinc-900 px-3 py-1 rounded text-zinc-300 border border-zinc-800">JWT / SHA256 Auth</span>
+                            <span class="bg-zinc-900 px-3 py-1 rounded text-zinc-300 border border-zinc-800">Protocole WebSocket</span>
+                            <span class="bg-zinc-900 px-3 py-1 rounded text-zinc-300 border border-zinc-800">Chiffrement Vocal (Opus/libsodium)</span>
+                            <span class="bg-zinc-900 px-3 py-1 rounded text-zinc-300 border border-zinc-800">Architecture Serveur de Jeu</span>
+                            <span class="bg-zinc-900 px-3 py-1 rounded text-zinc-300 border border-zinc-800">Gestion de Paquets</span>
+                            <span class="bg-zinc-900 px-3 py-1 rounded text-zinc-300 border border-zinc-800">Auth JWT / SHA256</span>
                         </div>
                     </div>
 
@@ -136,7 +126,7 @@ import "../styles/global.css";
             <!-- PROJECTS SECTION -->
             <section class="mb-20">
                  <div class="mb-12 flex items-center gap-4">
-                    <h3 class="text-orange-500 font-bold uppercase tracking-widest text-xl">03. Selected Works</h3>
+                    <h3 class="text-orange-500 font-bold uppercase tracking-widest text-xl">03. Projets Sélectionnés</h3>
                     <div class="h-px bg-zinc-800 flex-grow"></div>
                 </div>
 
@@ -146,11 +136,11 @@ import "../styles/global.css";
                     <article class="group">
                         <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
                             <h3 class="text-2xl md:text-3xl font-bold text-white group-hover:text-orange-500 transition-colors">CPPCord</h3>
-                            <a href="https://github.com/doshibadev/cppcord" target="_blank" class="hidden md:inline-block text-sm text-zinc-500 hover:text-white border-b border-zinc-800 hover:border-orange-500 pb-0.5 transition-all">View Repository -></a>
+                            <a href="https://github.com/doshibadev/cppcord" target="_blank" class="hidden md:inline-block text-sm text-zinc-500 hover:text-white border-b border-zinc-800 hover:border-orange-500 pb-0.5 transition-all">Voir le dépôt -></a>
                         </div>
                         
                         <p class="text-zinc-400 text-lg leading-relaxed mb-6 max-w-3xl">
-                            A native, high-performance Discord client built with modern C++ and Qt. Designed as a lightweight alternative to Electron, delivering significantly lower memory usage. Features secure token storage and full voice chat implementation with encryption.
+                            Un client Discord natif haute performance développé en C++ moderne et Qt. Conçu comme une alternative légère à Electron, offrant une utilisation mémoire considérablement réduite. Intègre un stockage sécurisé des tokens et une implémentation complète du chat vocal chiffré.
                         </p>
 
                         <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-zinc-500 font-mono">
@@ -160,7 +150,7 @@ import "../styles/global.css";
                             <span>Opus Audio</span>
                         </div>
                          <div class="md:hidden mt-6">
-                             <a href="https://github.com/doshibadev/cppcord" target="_blank" class="text-sm text-white border-b border-orange-500 pb-0.5">View Repository -></a>
+                             <a href="https://github.com/doshibadev/cppcord" target="_blank" class="text-sm text-white border-b border-orange-500 pb-0.5">Voir le dépôt -></a>
                         </div>
                     </article>
 
@@ -170,11 +160,11 @@ import "../styles/global.css";
                     <article class="group">
                         <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
                             <h3 class="text-2xl md:text-3xl font-bold text-white group-hover:text-orange-500 transition-colors">Mosaic</h3>
-                            <a href="https://github.com/doshibadev/mosaic" target="_blank" class="hidden md:inline-block text-sm text-zinc-500 hover:text-white border-b border-zinc-800 hover:border-orange-500 pb-0.5 transition-all">View Repository -></a>
+                            <a href="https://github.com/doshibadev/mosaic" target="_blank" class="hidden md:inline-block text-sm text-zinc-500 hover:text-white border-b border-zinc-800 hover:border-orange-500 pb-0.5 transition-all">Voir le dépôt -></a>
                         </div>
                         
                         <p class="text-zinc-400 text-lg leading-relaxed mb-6 max-w-3xl">
-                             A package manager for Polytoria, solving manual script management. Allows developers to install, manage, and share Lua packages via a CLI. Built with a central registry, dependency resolution, and SHA256 verification.
+                             Un gestionnaire de paquets pour Polytoria, résolvant la gestion manuelle des scripts. Permet aux développeurs d'installer, gérer et partager des paquets Lua via une CLI. Construit avec un registre central, une résolution de dépendances et une vérification SHA256.
                         </p>
 
                         <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-zinc-500 font-mono">
@@ -184,7 +174,7 @@ import "../styles/global.css";
                             <span>Cloudflare R2</span>
                         </div>
                         <div class="md:hidden mt-6">
-                             <a href="https://github.com/doshibadev/mosaic" target="_blank" class="text-sm text-white border-b border-orange-500 pb-0.5">View Repository -></a>
+                             <a href="https://github.com/doshibadev/mosaic" target="_blank" class="text-sm text-white border-b border-orange-500 pb-0.5">Voir le dépôt -></a>
                         </div>
                     </article>
 
@@ -194,21 +184,21 @@ import "../styles/global.css";
                     <article class="group">
                          <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
                             <h3 class="text-2xl md:text-3xl font-bold text-white group-hover:text-orange-500 transition-colors">Lithium CLR</h3>
-                            <a href="https://github.com/lithium-clr/lithium-server" target="_blank" class="hidden md:inline-block text-sm text-zinc-500 hover:text-white border-b border-zinc-800 hover:border-orange-500 pb-0.5 transition-all">View Repository -></a>
+                            <a href="https://github.com/lithium-clr/lithium-server" target="_blank" class="hidden md:inline-block text-sm text-zinc-500 hover:text-white border-b border-zinc-800 hover:border-orange-500 pb-0.5 transition-all">Voir le dépôt -></a>
                         </div>
                         
                         <p class="text-zinc-400 text-lg leading-relaxed mb-6 max-w-3xl">
-                            A complete reimplementation of the Hytale server logic using C# and the Common Language Runtime (CLR). Focused on zero-cost abstractions, reduced memory allocations, and high-speed packet handling.
+                            Une réimplémentation complète de la logique serveur Hytale utilisant C# et le Common Language Runtime (CLR). Axé sur des abstractions à coût zéro, une réduction des allocations mémoire et un traitement des paquets à haute vitesse.
                         </p>
 
                         <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-zinc-500 font-mono">
                             <span>C# / .NET 10</span>
                             <span>Aspire</span>
                             <span>Docker</span>
-                            <span>System Architecture</span>
+                            <span>Architecture Système</span>
                         </div>
                         <div class="md:hidden mt-6">
-                             <a href="https://github.com/lithium-clr/lithium-server" target="_blank" class="text-sm text-white border-b border-orange-500 pb-0.5">View Repository -></a>
+                             <a href="https://github.com/lithium-clr/lithium-server" target="_blank" class="text-sm text-white border-b border-orange-500 pb-0.5">Voir le dépôt -></a>
                         </div>
                     </article>
 
@@ -217,7 +207,7 @@ import "../styles/global.css";
 
             <footer class="pt-12 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-zinc-600">
                 <div class="mb-4 md:mb-0">
-                    &copy; 2026 Arthur Duchene. Available for internships.
+                    &copy; 2026 Arthur Duchene. Disponible pour des stages.
                 </div>
                 <div class="flex gap-6">
                     <a href="mailto:arthurduchene025@gmail.com" class="hover:text-white transition-colors">Email</a>
