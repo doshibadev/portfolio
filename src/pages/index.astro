@@ -21,10 +21,10 @@ import Analytics from "@vercel/analytics/astro";
                 window.location.href = '/fr';
             } else if (!savedLang && browserLang.startsWith('fr')) {
                 window.location.href = '/fr';
+            } else {
+                // Only save 'en' if we are NOT redirecting
+                localStorage.setItem('language-preference', 'en');
             }
-            
-            // Save preference when staying on EN page
-            localStorage.setItem('language-preference', 'en');
         </script>
 	</head>
 	<body class="bg-[#0a0a0a] text-zinc-300 font-mono selection:bg-orange-500 selection:text-black antialiased">
@@ -37,7 +37,7 @@ import Analytics from "@vercel/analytics/astro";
                  <div class="flex justify-end mb-8 text-sm font-medium">
                     <span class="text-orange-500">EN</span>
                     <span class="mx-2 text-zinc-700">|</span>
-                    <a href="/fr" class="text-zinc-500 hover:text-white transition-colors">FR</a>
+                    <a href="/fr" onclick="localStorage.setItem('language-preference', 'fr')" class="text-zinc-500 hover:text-white transition-colors">FR</a>
                 </div>
 
                 <div class="border-l-2 border-orange-500 pl-6 md:pl-8">
