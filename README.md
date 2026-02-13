@@ -1,7 +1,7 @@
 # Arthur Duchene - Portfolio
 
 A high-performance, technical portfolio website built with **Astro** and **Tailwind CSS**. 
-The design follows an "Industrial Blueprint" aesthetic, prioritizing readability, structure, and a systems engineering identity.
+The design follows an "Industrial Blueprint" aesthetic, prioritizing readability, structure, and a systems developer identity.
 
 ## 🛠️ Technologies
 
